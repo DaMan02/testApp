@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OTPActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="An OTP has been sent to your phone number."
+        android:textStyle="bold"
+        android:layout_marginTop="100dp"
+        android:visibility="gone"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/otp_input_layout"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeWidth="6dp"
+        app:boxStrokeColor="@color/colorAccent"
+        app:boxCornerRadiusBottomEnd="6dp"
+        app:boxCornerRadiusTopEnd="6dp"
+        app:boxCornerRadiusBottomStart="6dp"
+        app:boxCornerRadiusTopStart="6dp"
+        android:hint="Enter OTP"
+        app:errorEnabled="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="200dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otp_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+           />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/verify_btn"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:text="Verify OTP"
+        android:layout_centerHorizontal="true"
+        app:rippleColor="@color/colorAccent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_below="@+id/otp_input_layout"
+        app:strokeWidth="2dp"
+        app:cornerRadius="46dp"
+        android:textSize="18sp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:strokeColor="@color/colorAccent"
+        android:layout_marginTop="60dp"
+        />
+
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>

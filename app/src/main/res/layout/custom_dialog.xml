@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:background="@color/bg"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+           >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/alert_title"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@android:color/white"
+                android:text="Title"
+                android:fontFamily="sans-serif"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:id="@+id/alert_message"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:textColor="@android:color/white"
+                android:autoLink="web"
+                android:text="This is default message"
+                android:layout_below="@+id/alert_title"
+                android:textSize="18sp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/alert_message">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="CANCEL"
+                        android:textColor="@color/colorAccent"
+                        android:id="@+id/alert_negative_btn"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:background="#C8FFFFFF"
+                        android:paddingTop="8dp"
+                        android:layout_marginEnd="25dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="OK"
+                        android:elevation="6dp"
+                        android:textAlignment="center"
+                        android:background="@color/colorPrimaryDark"
+                        android:id="@+id/alert_positive_btn"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingTop="8dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="18dp"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

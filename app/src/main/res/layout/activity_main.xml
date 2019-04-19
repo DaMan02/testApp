@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-thin"
+        android:text="Visitor\nManagement"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:layout_marginTop="50dp"
+        android:textColor="#C4FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.circularreveal.CircularRevealLinearLayout
+        android:id="@+id/phone_input_container"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:background="#F2D5D5D5"
+        android:paddingTop="5dp"
+        android:layout_marginTop="60dp"
+        android:layout_below="@id/welcome_text">
+
+        <TextView
+            android:id="@+id/small_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-thin"
+            android:text="Enter your phone number to continue"
+            android:textAlignment="center"
+            android:layout_marginTop="4dp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/welcome_text"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone_input_layout"
+            android:layout_width="match_parent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:boxStrokeWidth="6dp"
+            app:boxStrokeColor="@color/colorAccent"
+            app:boxCornerRadiusBottomEnd="6dp"
+            app:boxCornerRadiusTopEnd="6dp"
+            app:boxCornerRadiusBottomStart="6dp"
+            android:layout_marginTop="20dp"
+            app:boxCornerRadiusTopStart="6dp"
+            android:hint="Phone number"
+            app:errorEnabled="true"
+            android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phone_input_id"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:focusedByDefault="true"
+            android:inputType="phone"
+            android:maxLength="10"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/upload_btn_id"
+        android:layout_width="280dp"
+        android:layout_height="68dp"
+        android:text="Upload photo"
+        android:elevation="16dp"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:textAppearance="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        app:icon="@drawable/ic_camera"
+        app:cornerRadius="46dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/phone_input_container"/>
+
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>
